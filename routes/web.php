@@ -4,10 +4,14 @@ use Illuminate\Support\Facades\Route;
 
 //EJERCICIO 2 - DEFINICION DE LAS RUTAS
 
+//para mostrar la pantalla principal
 Route::get('/', function () {
-//    return view('welcome');
-echo 'Pantalla principal';
+return view ('catalog.index');
 });
+
+// Route::get('/', function () {
+// echo 'Pantalla principal';
+// });
 
 Route::get('login',function() {
     return 'Login usuario';
