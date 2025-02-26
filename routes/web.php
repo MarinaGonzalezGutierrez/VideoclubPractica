@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\CatalogController;
 use Illuminate\Support\Facades\Route;
 
 //EJERCICIO 2 - DEFINICION DE LAS RUTAS
@@ -41,3 +42,7 @@ Route::get('catalog/edit/{id}',function($id){
     
 });
 
+Route::get('catalog', [CatalogController::class, 'getIndex']);
+Route::get('catalog/show/{id}', [CatalogController::class, 'getShow']);
+Route::get('catalog/create', [CatalogController::class, 'getCreate']);
+Route::get('catalog/edit/{id}', [CatalogController::class, 'getEdit']);
