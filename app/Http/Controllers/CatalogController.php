@@ -187,6 +187,12 @@ class CatalogController extends Controller
 		return view('catalog.create', array('arrayPeliculas'=>$peliculas));
 	}
 
+	public function Store(){
+		
+	}
+
+	
+
     // public function getShow($id){
     //     return view('catalog.show', array('id' => $id), array('arrayPeliculas'=> $this->arrayPeliculas));  
     //   }
