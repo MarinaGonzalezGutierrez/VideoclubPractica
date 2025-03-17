@@ -49,4 +49,4 @@ Route::get('catalog/edit/{id}', [CatalogController::class, 'getEdit']);
 
 //ruta crear pelicula formulario
 
-Route::post('catalog', [CatalogController::class, 'store'])->name('catalog.store');
+Route::post('catalog', [CatalogController::class, 'store'])->name('catalog.index');
