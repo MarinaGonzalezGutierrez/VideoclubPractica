@@ -1,14 +1,15 @@
 <?php
 
 use App\Http\Controllers\CatalogController;
+use App\Http\Controllers\HomeController;
 use Illuminate\Support\Facades\Route;
 
 //EJERCICIO 2 - DEFINICION DE LAS RUTAS
 
 //para mostrar la pantalla principal
-Route::get('/', function () {
-return view ('catalog.index');
-});
+// Route::get('/', function () {
+// return view ('HomeController.php');
+// });
 
 // Route::get('/', function () {
 // echo 'Pantalla principal';
@@ -42,6 +43,8 @@ Route::get('catalog/edit/{id}',function($id){
     
 });
 
+
+Route::get('/', [HomeController::class, 'getHome']);
 Route::get('catalog', [CatalogController::class, 'getIndex']);
 Route::get('catalog/show/{id}', [CatalogController::class, 'getShow']);
 Route::get('catalog/create', [CatalogController::class, 'getCreate']);
@@ -49,4 +52,4 @@ Route::get('catalog/edit/{id}', [CatalogController::class, 'getEdit']);
 
 //ruta crear pelicula formulario
 
-Route::post('catalog', [CatalogController::class, 'store'])->name('catalog.index');
+Route::post('catalog', [CatalogController::class, 'store'])->name('catalog.store');
